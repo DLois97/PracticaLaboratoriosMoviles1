@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="pregunta1">¿Qué película ganó el oscar de animación de 2019?</string>
+    <string name="Respuesta_correcta">Spiderman Un nuevo universo</string>
+    <string name="RespuestaFalsa1">Spiderman 1</string>
+    <string name="RespuestaFalsa2">Spiderman 2</string>
+    <string name="RespuestaFalsa3">Spiderman 3</string>
+    <string name="Puntuacion">Puntuación : 0</string>
+    <string name="Siguiente">Siguiente</string>
+    <string name="Comprobar">Comprobar</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+</resources>
