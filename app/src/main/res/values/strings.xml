@@ -9,6 +9,11 @@
     <string name="Siguiente">Siguiente</string>
     <string name="Comprobar">Comprobar</string>
     <string name="title_activity_main2">MainActivity2</string>
+    <string name="content_question2">Esta es una pregunta de prueba</string>
+    <string name="answer_quetion_correct_2">verdadera</string>
+    <string name="anwser_question_false_2_1">FALSO</string>
+    <string name="anwser_question_false_2_2">FALSO 1</string>
+    <string name="anwser_question_false_2_3">FALSO 1</string>
     <!--
     This string is used for square devices and overridden by hello_world in
     values-round/strings.xml for round devices.
