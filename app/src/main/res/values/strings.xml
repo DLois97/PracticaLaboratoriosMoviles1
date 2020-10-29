@@ -14,9 +14,19 @@
     <string name="anwser_question_false_2_1">FALSO</string>
     <string name="anwser_question_false_2_2">FALSO 1</string>
     <string name="anwser_question_false_2_3">FALSO 1</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
+    <string name= "content_question3">¿Cuántas películas existen de Mision imposible?</string>
+    <string name="answer_question_correct_3">6</string>
+    <string name="anwser_question_false_3_1">8</string>
+    <string name="anwser_question_false_3_2">3</string>
+    <string name="anwser_question_false_3_3">7</string>
+    <string name= "content_question4">Identifica la película. ¿Cuál de estas imágenes es una escena de Jurassic Park?</string>
+    <string name="answer_question_correct_4">Imagen 1</string>
+    <string name="anwser_question_false_4_1">Imagen 2</string>
+    <string name="anwser_question_false_4_2">Imagen 3</string>
+    <string name="anwser_question_false_4_3">Imagen 4</string>
+    <string name= "content_question5">¿Cómo se llama este actor?</string>
+    <string name="answer_question_correct_5">Jhonny Depp</string>
+    <string name="anwser_question_false_5_1">Tom Cruise</string>
+    <string name="anwser_question_false_5_2">Leonardo Di Caprio</string>
+    <string name="anwser_question_false_5_3">Tom Hiddleston</string>
 </resources>
