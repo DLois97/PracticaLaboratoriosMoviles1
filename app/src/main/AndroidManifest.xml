@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivityThirdQuestion"></activity>
+        <activity android:name=".MainActivityFinalScore"></activity>
+        <activity android:name=".MainActivityFifthQuestion" />
+        <activity android:name=".MainActivityForurthQuestion" />
+        <activity android:name=".MainActivityThirdQuestion" />
         <activity android:name=".Activity2" />
         <activity android:name=".MainActivity">
             <intent-filter>
