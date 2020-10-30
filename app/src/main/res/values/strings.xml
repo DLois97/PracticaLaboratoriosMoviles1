@@ -9,11 +9,11 @@
     <string name="Siguiente">Siguiente</string>
     <string name="Comprobar">Comprobar</string>
     <string name="title_activity_main2">MainActivity2</string>
-    <string name="content_question2">Esta es una pregunta de prueba</string>
-    <string name="answer_quetion_correct_2">verdadera</string>
-    <string name="anwser_question_false_2_1">FALSO</string>
-    <string name="anwser_question_false_2_2">FALSO 1</string>
-    <string name="anwser_question_false_2_3">FALSO 1</string>
+    <string name="content_question2">¿Cual de las siguientes es una película de Hugh Jackman</string>
+    <string name="answer_quetion_correct_2">El gran showman</string>
+    <string name="anwser_question_false_2_1">Lo imposible</string>
+    <string name="anwser_question_false_2_2">Multiple</string>
+    <string name="anwser_question_false_2_3">Los increibles</string>
     <string name="content_question3">¿Cuántas películas existen de Mision imposible?</string>
     <string name="answer_question_correct_3">6</string>
     <string name="anwser_question_false_3_1">8</string>
