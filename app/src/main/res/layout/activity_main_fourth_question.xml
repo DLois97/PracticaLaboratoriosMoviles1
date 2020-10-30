@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityFifthQuestion">
+    tools:context=".MainActivityFourthQuestion">
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/content_question5"
+        android:text="@string/content_question4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -18,7 +18,7 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <RadioGroup
-        android:id="@+id/radioGroup5"
+        android:id="@+id/radioGroup4"
         android:layout_width="281dp"
         android:layout_height="132dp"
         android:layout_marginStart="15dp"
@@ -26,28 +26,28 @@
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <RadioButton
-            android:id="@+id/respuestaincorrecta5_3"
+            android:id="@+id/respuestaincorrecta4_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/answer_question_false_5_3" />
+            android:text="@string/answer_question_false_4_1" />
 
         <RadioButton
-            android:id="@+id/respuestaCorrecta5"
+            android:id="@+id/respuestaincorrecta4_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/answer_question_correct_5" />
+            android:text="@string/answer_question_false_4_2" />
 
         <RadioButton
-            android:id="@+id/respuestaInorrecta5_2"
+            android:id="@+id/respuestaCorrecta4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/answer_question_false_5_2" />
+            android:text="@string/answer_question_correct_4" />
 
         <RadioButton
-            android:id="@+id/Respuestaincorrecta5_1"
+            android:id="@+id/Respuestaincorrecta4_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/answer_question_false_5_1" />
+            android:text="@string/answer_question_false_4_3" />
     </RadioGroup>
 
     <Button
