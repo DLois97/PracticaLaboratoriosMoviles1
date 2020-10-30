@@ -22,7 +22,7 @@ public class MainActivityFifthQuestion extends AppCompatActivity {
         TextView tv = (TextView) findViewById(R.id.Puntuacion);
         tv.setText("Puntuacion:" + this.puntuacion);
     }
-    public void respuesta4(View view) {
+    public void respuesta5(View view) {
 
         RadioButton idR = (RadioButton) findViewById(R.id.RespuestaCorrecta3);
         if (idR.isChecked()) {
