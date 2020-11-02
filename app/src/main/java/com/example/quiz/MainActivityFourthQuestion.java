@@ -31,7 +31,11 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, "Respuesta incorrecta ", Toast.LENGTH_LONG).show();
-            puntuacion -= 2;
+            if(puntuacion<=2){
+              puntuacion=0;
+            }else {
+                puntuacion -= 2;
+            }
         }
 
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
