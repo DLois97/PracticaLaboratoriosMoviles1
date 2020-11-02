@@ -2,73 +2,85 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnJurassic"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivityFourthQuestion">
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="307dp"
+        android:layout_height="65dp"
         android:text="@string/content_question4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintBottom_toTopOf="@+id/Puntuacion"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup4"
-        android:layout_width="281dp"
-        android:layout_height="132dp"
-        android:layout_marginStart="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <RadioButton
-            android:id="@+id/respuestaincorrecta4_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/answer_question_false_4_1" />
-
-        <RadioButton
-            android:id="@+id/respuestaincorrecta4_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/answer_question_false_4_2" />
-
-        <RadioButton
-            android:id="@+id/respuestaCorrecta4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/answer_question_correct_4" />
-
-        <RadioButton
-            android:id="@+id/Respuestaincorrecta4_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/answer_question_false_4_3" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/comprobar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="respuesta4"
-        android:text="@string/Comprobar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintVertical_bias="0.181" />
 
     <TextView
         android:id="@+id/Puntuacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="268dp"
+        android:layout_marginEnd="284dp"
         android:text="@string/Puntuacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="respuestaCorrecta"
+        app:layout_constraintBottom_toTopOf="@+id/Puntuacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.355"
+        app:srcCompat="@mipmap/jurassic" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:onClick="respuestaIncorrecta"
+        app:layout_constraintBottom_toTopOf="@+id/Puntuacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.307"
+        app:srcCompat="@mipmap/batman" />
+
+    <ImageButton
+        android:id="@+id/btnSpiderman"
+        android:layout_width="157dp"
+        android:layout_height="114dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="76dp"
+        android:onClick="respuestaIncorrecta"
+        app:layout_constraintBottom_toTopOf="@+id/Puntuacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/spiderman" />
+
+    <ImageButton
+        android:id="@+id/btnBatman"
+        android:layout_width="176dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="76dp"
+        android:onClick="respuestaIncorrecta"
+        app:layout_constraintBottom_toTopOf="@+id/Puntuacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/superman" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

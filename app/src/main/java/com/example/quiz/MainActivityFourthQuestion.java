@@ -23,21 +23,22 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         tv.setText("Puntuacion:" + this.puntuacion);
     }
 
-    public void respuesta4(View view) {
+    public void respuestaIncorrecta(View view) {
 
-        RadioButton idR = (RadioButton) findViewById(R.id.respuestaCorrecta4);
-        if (idR.isChecked()) {
-            puntuacion += 3;
-            Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Respuesta incorrecta ", Toast.LENGTH_LONG).show();
-            if(puntuacion<=2){
-              puntuacion=0;
-            }else {
-                puntuacion -= 2;
-            }
+        Toast.makeText(this, "Respuesta incorrecta ", Toast.LENGTH_LONG).show();
+        if(puntuacion<=2){
+          puntuacion=0;
+        }else {
+            puntuacion -= 2;
         }
+        Intent intent = new Intent(this, MainActivityFifthQuestion.class);
+        intent.putExtra("puntuacion", getPuntuacion());
+        startActivity(intent);
+    }
 
+    public void respuestaCorrecta(View view) {
+        puntuacion += 3;
+        Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
         intent.putExtra("puntuacion", getPuntuacion());
         startActivity(intent);
