@@ -2,7 +2,9 @@ package com.example.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivityFinalScore extends AppCompatActivity {
@@ -17,6 +19,21 @@ public class MainActivityFinalScore extends AppCompatActivity {
         Bundle datos = this.getIntent().getExtras();
         puntuacion = datos.getInt("puntuacion");
         TextView tv = (TextView) findViewById(R.id.Puntuacion);
-        tv.setText("Puntuacion:" + this.puntuacion);
+        tv.setText("Puntuación: " + this.puntuacion);
+    }
+
+    public void retry(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("puntuacion",getPuntuacion());
+        startActivity(intent);
+        finish();
+    }
+
+    public void quit(View view){
+        System.exit(0);
+    }
+
+    public int getPuntuacion() {
+        return puntuacion;
     }
 }

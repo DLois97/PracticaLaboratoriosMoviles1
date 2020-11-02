@@ -40,6 +40,7 @@ public class Activity2 extends AppCompatActivity {
                     Intent intent = new Intent(adapterView.getContext(), MainActivityThirdQuestion.class);
                     intent.putExtra("puntuacion",getPuntuacion());
                     startActivity(intent);
+                    finish();
                 } else {
                     if(puntuacion<=2){
                         puntuacion=0;
@@ -50,32 +51,11 @@ public class Activity2 extends AppCompatActivity {
                     Intent intent = new Intent(adapterView.getContext(), MainActivityThirdQuestion.class);
                     intent.putExtra("puntuacion",getPuntuacion());
                     startActivity(intent);
+                    finish();
                 }
             }
         });
     }
-/*
-    public void respuesta2 (View view){
-
-        RadioButton idR = (RadioButton) findViewById(R.id.RespuestaCorrecta2);
-        if(idR.isChecked()) {
-            puntuacion += 3;
-            Toast.makeText(this,"Respuesta correcta",Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(this,"Respuesta incorrecta ",Toast.LENGTH_LONG).show();
-            if(puntuacion<=2){
-                puntuacion=0;
-            }else {
-                puntuacion -= 2;
-            }
-        }
-
-        Intent intent = new Intent(this, MainActivityThirdQuestion.class);
-        intent.putExtra("puntuacion",getPuntuacion());
-        startActivity(intent);
-
-    }
-*/
     public int getPuntuacion() {
         return puntuacion;
     }

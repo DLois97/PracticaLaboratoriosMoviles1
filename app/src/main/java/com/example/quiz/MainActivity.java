@@ -20,5 +20,6 @@ public class MainActivity extends AppCompatActivity {
     public void empezar(View view){
         Intent intent = new Intent(this, MainActivityFirstQuestion.class);
         startActivity(intent);
+        finish();
     }
 }

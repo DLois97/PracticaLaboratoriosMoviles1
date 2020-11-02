@@ -34,6 +34,7 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
         intent.putExtra("puntuacion", getPuntuacion());
         startActivity(intent);
+        finish();
     }
 
     public void respuestaCorrecta(View view) {
@@ -42,6 +43,7 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
         intent.putExtra("puntuacion", getPuntuacion());
         startActivity(intent);
+        finish();
     }
     public int getPuntuacion() {
         return puntuacion;
