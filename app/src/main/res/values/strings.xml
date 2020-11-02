@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Quiz</string>
+    <string name="Welcome">Bienvenido a nuestro Quiz de peliculas "\n" Para empezar pulsa el botón que tienes abajo</string>
+    <string name="Begin">Empezar</string>
     <string name="pregunta1">¿Qué película ganó el oscar de animación de 2019?</string>
     <string name="Respuesta_correcta">Spiderman Un nuevo universo</string>
     <string name="RespuestaFalsa1">Spiderman 1</string>
