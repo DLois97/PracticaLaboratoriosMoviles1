@@ -24,7 +24,7 @@ public class MainActivityFifthQuestion extends AppCompatActivity {
     }
     public void respuesta5(View view) {
 
-        RadioButton idR = (RadioButton) findViewById(R.id.RespuestaCorrecta3);
+        RadioButton idR = (RadioButton) findViewById(R.id.respuestaCorrecta5);
         if (idR.isChecked()) {
             puntuacion += 3;
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
