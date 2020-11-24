@@ -1,12 +1,15 @@
 package com.example.quiz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.appcompat.widget.Toolbar;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 
@@ -18,11 +21,15 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText nameRegister;
     private EditText passwordRegister;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         nameRegister = (EditText) findViewById(R.id.registerUserName);
         passwordRegister = (EditText) findViewById(R.id.passText);
@@ -56,5 +63,22 @@ public class RegisterActivity extends AppCompatActivity {
                 finish();
             }
         }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if( id == R.id.help) {
+            Toast.makeText(this, "HELP", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ManualRegistro.class);
+            startActivity(intent);
+        }
+        return true;
     }
 }

@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".ManualLogin"></activity>
+        <activity android:name=".ManualRegistro" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,8 +32,7 @@
         <activity android:name=".MainActivityFourthQuestion" />
         <activity android:name=".MainActivityThirdQuestion" />
         <activity android:name=".Activity2" />
-        <activity android:name=".MainActivity"/>
-
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

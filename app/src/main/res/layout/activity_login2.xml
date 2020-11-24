@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0F4E8C"
     android:onClick="login"
     tools:context=".LoginActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/register"
@@ -24,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="100dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="162dp"
         android:layout_marginEnd="101dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,12 +57,15 @@
         android:layout_marginTop="222dp"
         android:layout_marginEnd="12dp"
         android:text="Si no está registrado, registrese aqui:"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/registerBtn"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.763" />
 
     <Button
         android:id="@+id/registerBtn"
@@ -71,9 +84,11 @@
         android:id="@+id/txtNameUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="184dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="156dp"
         android:text="Nombre de Usuario:"
+        android:textColor="#FDFDFD"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,9 +96,21 @@
         android:id="@+id/txtPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="235dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="216dp"
         android:text="Contraseña:"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameUser" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="187dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="112dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:srcCompat="@drawable/quiz_3d" />
 </androidx.constraintlayout.widget.ConstraintLayout>
