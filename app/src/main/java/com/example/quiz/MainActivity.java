@@ -18,17 +18,19 @@ public class MainActivity extends AppCompatActivity {
     private int puntuacion = 0;
     Toolbar toolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        MediaPlayer mpbck = MediaPlayer.create(this, R.raw.question);
+        mpbck.start();
+        mpbck.setLooping(true);
+
     }
     public void empezar(View view) throws InterruptedException {
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.inicio);
-        mp.start();
-        Thread.sleep(2000);
         Intent intent = new Intent(this, MainActivityFirstQuestion.class);
         startActivity(intent);
         finish();
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-
         if( id == R.id.help) {
             Toast.makeText(this, "HELP", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, ManualInicio.class);
