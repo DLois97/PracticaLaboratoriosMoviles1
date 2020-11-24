@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
-    public void empezar(View view){
+    public void empezar(View view) throws InterruptedException {
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.inicio);
+        mp.start();
+        Thread.sleep(2000);
         Intent intent = new Intent(this, MainActivityFirstQuestion.class);
         startActivity(intent);
         finish();

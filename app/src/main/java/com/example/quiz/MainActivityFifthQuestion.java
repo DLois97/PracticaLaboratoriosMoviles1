@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,22 +31,29 @@ public class MainActivityFifthQuestion extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
-    public void respuesta5(View view) {
+    public void respuesta5(View view) throws InterruptedException {
 
         RadioButton idR = (RadioButton) findViewById(R.id.respuestaCorrecta5);
         RadioButton idR2 = (RadioButton) findViewById(R.id.Respuestaincorrecta5_1);
         RadioButton idR3 = (RadioButton) findViewById(R.id.respuestaInorrecta5_2);
         RadioButton idR4 = (RadioButton) findViewById(R.id.respuestaincorrecta5_3);
+        MediaPlayer mpfail = MediaPlayer.create(this, R.raw.fail);
+        MediaPlayer mpcorrect = MediaPlayer.create(this, R.raw.correct);
         if (idR.isChecked()) {
             puntuacion += 3;
+            mpcorrect.start();
+            Thread.sleep(1000);
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();        Intent intent = new Intent(this, MainActivityFinalScore.class);
             intent.putExtra("puntuacion", getPuntuacion());
             startActivity(intent);
             finish();
         } else if(!idR.isChecked() && !idR2.isChecked() && !idR4.isChecked() & !idR3.isChecked()){
+            mpfail.start();
             Toast.makeText(this, "Marque una respuesta", Toast.LENGTH_LONG).show();
         }
         else {
+            mpfail.start();
+            Thread.sleep(1000);
             Toast.makeText(this, "Respuesta incorrecta ", Toast.LENGTH_LONG).show();
             if(puntuacion<=2){
                 puntuacion=0;

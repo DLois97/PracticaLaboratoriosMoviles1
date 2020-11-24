@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,6 +35,8 @@ public class Activity2 extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        final MediaPlayer mpfail = MediaPlayer.create(this, R.raw.fail);
+        final MediaPlayer mpcorrect = MediaPlayer.create(this, R.raw.correct);
 
         tv.setText("Puntuacion:"+this.puntuacion);
         lv1 = (ListView) findViewById(R.id.lv1);
@@ -43,6 +46,12 @@ public class Activity2 extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l){
                 if (soluciones[i]){
+                    mpcorrect.start();
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     puntuacion += 3;
                     Toast.makeText(adapterView.getContext(),"Respuesta correcta",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(adapterView.getContext(), MainActivityThirdQuestion.class);
@@ -54,6 +63,12 @@ public class Activity2 extends AppCompatActivity {
                         puntuacion=0;
                     }else {
                         puntuacion -= 2;
+                    }
+                    mpfail.start();
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
                     Toast.makeText(adapterView.getContext(),"Respuesta incorrecta ",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(adapterView.getContext(), MainActivityThirdQuestion.class);

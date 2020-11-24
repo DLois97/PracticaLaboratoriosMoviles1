@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,10 +31,14 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
     }
 
-    public void respuestaIncorrecta(View view) {
+    public void respuestaIncorrecta(View view) throws InterruptedException {
 
+        MediaPlayer mpfail = MediaPlayer.create(this, R.raw.fail);
+        mpfail.start();
+        Thread.sleep(1000);
         Toast.makeText(this, "Respuesta incorrecta ", Toast.LENGTH_LONG).show();
         if(puntuacion<=2){
           puntuacion=0;
@@ -46,7 +51,10 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         finish();
     }
 
-    public void respuestaCorrecta(View view) {
+    public void respuestaCorrecta(View view) throws InterruptedException {
+        MediaPlayer mpcorrect = MediaPlayer.create(this, R.raw.correct);
+        mpcorrect.start();
+        Thread.sleep(1000);
         puntuacion += 3;
         Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
