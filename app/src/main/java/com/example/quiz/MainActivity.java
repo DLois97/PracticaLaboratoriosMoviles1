@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private int puntuacion = 0;
+    private String name;
     Toolbar toolbar;
 
 
@@ -24,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
+        Bundle datos = this.getIntent().getExtras();
+        name = datos.getString("name");
         setSupportActionBar(toolbar);
 
     }
     public void empezar(View view) throws InterruptedException {
         Intent intent = new Intent(this, MainActivityFirstQuestion.class);
+        intent.putExtra("name",name);
         startActivity(intent);
         finish();
     }

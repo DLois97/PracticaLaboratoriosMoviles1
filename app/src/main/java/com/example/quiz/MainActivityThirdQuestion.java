@@ -18,6 +18,7 @@ public class MainActivityThirdQuestion extends AppCompatActivity {
 
     private int puntuacion;
     Toolbar toolbar;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivityThirdQuestion extends AppCompatActivity {
 
         Bundle datos = this.getIntent().getExtras();
         puntuacion = datos.getInt("puntuacion");
+        name = datos.getString("name");
         TextView tv = (TextView) findViewById(R.id.Puntuacion);
         tv.setText("Puntuación: " + this.puntuacion);
 
@@ -50,6 +52,7 @@ public class MainActivityThirdQuestion extends AppCompatActivity {
             Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, MainActivityFourthQuestion.class);
             intent.putExtra("puntuacion", getPuntuacion());
+            intent.putExtra("name",name);
             startActivity(intent);
             finish();
         } else if (!idR.isChecked() && !idR2.isChecked() && !idR4.isChecked() & !idR3.isChecked()) {
@@ -64,12 +67,14 @@ public class MainActivityThirdQuestion extends AppCompatActivity {
                 puntuacion = 0;
                 Intent intent = new Intent(this, MainActivityFourthQuestion.class);
                 intent.putExtra("puntuacion", getPuntuacion());
+                intent.putExtra("name",name);
                 startActivity(intent);
                 finish();
             } else {
                 puntuacion -= 2;
                 Intent intent = new Intent(this, MainActivityFourthQuestion.class);
                 intent.putExtra("puntuacion", getPuntuacion());
+                intent.putExtra("name",name);
                 startActivity(intent);
                 finish();
             }

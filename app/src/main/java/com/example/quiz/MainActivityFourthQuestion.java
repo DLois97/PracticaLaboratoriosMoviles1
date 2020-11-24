@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivityFourthQuestion extends AppCompatActivity {
     private int puntuacion;
+    private String name;
     Toolbar toolbar;
 
     @Override
@@ -25,6 +26,7 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
 
         Bundle datos = this.getIntent().getExtras();
         puntuacion = datos.getInt("puntuacion");
+        name = datos.getString("name");
         TextView tv = (TextView) findViewById(R.id.Puntuacion);
         tv.setText("Puntuacion:" + this.puntuacion);
 
@@ -47,6 +49,7 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         }
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
         intent.putExtra("puntuacion", getPuntuacion());
+        intent.putExtra("name",name);
         startActivity(intent);
         finish();
     }
@@ -59,6 +62,7 @@ public class MainActivityFourthQuestion extends AppCompatActivity {
         Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this, MainActivityFifthQuestion.class);
         intent.putExtra("puntuacion", getPuntuacion());
+        intent.putExtra("name",name);
         startActivity(intent);
         finish();
     }

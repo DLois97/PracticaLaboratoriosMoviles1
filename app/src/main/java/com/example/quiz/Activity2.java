@@ -21,6 +21,7 @@ public class Activity2 extends AppCompatActivity {
 
     private int puntuacion;
     private ListView lv1;
+    private String name;
     private String respuestas[] = {"X-Men","Los odiosos 8","Peter Pan","Gran torino"};
     private boolean soluciones[] = {true,false,false,false};
     Toolbar toolbar;
@@ -31,6 +32,7 @@ public class Activity2 extends AppCompatActivity {
         setContentView(R.layout.activity_2);
         Bundle datos = this.getIntent().getExtras();
         puntuacion = datos.getInt("puntuacion");
+        name = datos.getString("name");
         TextView tv = (TextView) findViewById(R.id.Puntuacion);
 
         toolbar = findViewById(R.id.toolbar);
@@ -56,6 +58,7 @@ public class Activity2 extends AppCompatActivity {
                     Toast.makeText(adapterView.getContext(),"Respuesta correcta",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(adapterView.getContext(), MainActivityThirdQuestion.class);
                     intent.putExtra("puntuacion",getPuntuacion());
+                    intent.putExtra("name",name);
                     startActivity(intent);
                     finish();
                 } else {
@@ -73,6 +76,7 @@ public class Activity2 extends AppCompatActivity {
                     Toast.makeText(adapterView.getContext(),"Respuesta incorrecta ",Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(adapterView.getContext(), MainActivityThirdQuestion.class);
                     intent.putExtra("puntuacion",getPuntuacion());
+                    intent.putExtra("name",name);
                     startActivity(intent);
                     finish();
                 }
