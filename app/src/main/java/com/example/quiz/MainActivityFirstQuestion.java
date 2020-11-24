@@ -16,11 +16,13 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivityFirstQuestion extends AppCompatActivity {
     private int puntuacion;
     Toolbar toolbar;
+    private String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_first_question);
-
+        Bundle datos = this.getIntent().getExtras();
+        name = datos.getString("name");
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -39,6 +41,7 @@ public class MainActivityFirstQuestion extends AppCompatActivity {
             Toast.makeText(this,"Respuesta correcta",Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, Activity2.class);
             intent.putExtra("puntuacion",getPuntuacion());
+            intent.putExtra("name",name);
             startActivity(intent);
             finish();
         }else if(!idR.isChecked() && !idR2.isChecked() && !idR4.isChecked() & !idR3.isChecked()){
@@ -54,6 +57,7 @@ public class MainActivityFirstQuestion extends AppCompatActivity {
                 puntuacion=0;
                 Intent intent = new Intent(this, Activity2.class);
                 intent.putExtra("puntuacion",getPuntuacion());
+                intent.putExtra("name",name);
                 startActivity(intent);
                 finish();
             }else {
@@ -62,6 +66,7 @@ public class MainActivityFirstQuestion extends AppCompatActivity {
                 puntuacion -= 2;
                 Intent intent = new Intent(this, Activity2.class);
                 intent.putExtra("puntuacion",getPuntuacion());
+                intent.putExtra("name",name);
                 startActivity(intent);
                 finish();
             }

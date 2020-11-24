@@ -49,10 +49,13 @@ public class LoginActivity extends AppCompatActivity {
             Cursor fila = database.rawQuery("select name,password from user where name = \'"+nameLogin.getText().toString() +"\'",null);
             if (fila.moveToFirst()){
                 if (passwordLogin.getText().toString().equals(fila.getString(1))){
+
+                    Intent intent = new Intent(this, MainActivity.class);
+                    intent.putExtra("name",nameLogin.getText().toString());
+                    startActivity(intent);
+
                     nameLogin.setText("");
                     passwordLogin.setText("");
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
                     finish();
                 } else {
                     Toast.makeText(this, "contraseña incorrecta", Toast.LENGTH_LONG).show();
