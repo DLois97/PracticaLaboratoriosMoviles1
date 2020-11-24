@@ -20,7 +20,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="56dp"
-        android:text="Registro de Nuevo Usuario"
+        android:text="@string/Registro1"
         android:textColor="#FFD54F"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="102dp"
         android:layout_marginEnd="143dp"
-        android:text="Nombre de Usuario:"
+        android:text="@string/Registro2"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleRegister" />
@@ -43,8 +43,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="101dp"
+        android:autofillHints="@string/Null"
         android:background="#FFFFFF"
         android:ems="10"
+        android:hint="@string/Null"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameUserReg" />
@@ -55,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
         android:layout_marginEnd="168dp"
-        android:text="Contraseña:"
+        android:text="@string/Registro3"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerUserName" />
@@ -66,8 +68,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="101dp"
+        android:autofillHints="@string/Null"
         android:background="#FFFFFF"
         android:ems="10"
+        android:hint="@string/Null"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPass" />
@@ -79,7 +83,7 @@
         android:layout_marginTop="87dp"
         android:layout_marginEnd="149dp"
         android:onClick="registerUser"
-        android:text="Registrarse"
+        android:text="@string/RegistroButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

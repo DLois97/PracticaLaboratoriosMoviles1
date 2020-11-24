@@ -38,4 +38,26 @@
     <string name="Title_5">5.</string>
     <string name="Try_Again">Reintentar</string>
     <string name="Exit">Salir</string>
+    <string name="Entrar">Entrar</string>
+    <string name="si_no_est_registrado_registrese_aqui">Si no está registrado, registrese aqui:</string>
+    <string name="Null"></string>
+    <string name="Registro">Registro</string>
+    <string name="Nombre">Nombre de usuario:</string>
+    <string name="Contraseña">Contraseña:</string>
+    <string name="ManualInicio">Botón para empezar el\nquiz y  responder preguntas</string>
+    <string name="ManualLogin1">Si tienes usuario y contraseña,\n introdúcelos a continuación</string>
+    <string name="ManualLogin2">Aceptar inicio de sesión</string>
+    <string name="ManualLogin3">Si no tienes creada ninguna cuenta,\n pulsa el botón a continuación para registrarte</string>
+    <string name="ManualPregunta1">Pregunta a responder</string>
+    <string name="ManualPregunta2">Respuestas de la pregunta</string>
+    <string name="ManualPregunta3">Puntuación total \n que llevas acumulada</string>
+    <string name="ManualPregunta4">Botón para comprobar \n la respuesta marcada \n y pasar a la siguiente pantalla</string>
+    <string name="ManualRegistro1">Inserta tu nombre de Usuario</string>
+    <string name="ManualRegistro2">Introduce una contraseña única</string>
+    <string name="ManualRegistro3">Si tienes todo rellenado, \nacepta para finalizar el registro</string>
+    <string name="Registro1">Registro de Nuevo Usuario</string>
+    <string name="Registro2">Nombre de Usuario:</string>
+    <string name="Registro3">Contraseña:</string>
+    <string name="RegistroButton">Registrarse</string>
+
 </resources>

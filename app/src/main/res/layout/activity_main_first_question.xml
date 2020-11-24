@@ -96,7 +96,7 @@
         android:fontFamily="@font/baloo_da"
         android:text="@string/Puntuacion"
         android:textColor="#D32F2F"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

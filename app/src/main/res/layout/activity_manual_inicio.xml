@@ -11,11 +11,15 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
-        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="TODO" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -23,6 +27,7 @@
         android:layout_height="763dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
+        android:contentDescription="@string/Null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/manualinicio" />
@@ -34,7 +39,7 @@
         android:layout_marginTop="320dp"
         android:layout_marginEnd="16dp"
         android:background="#DCD6D6"
-        android:text="Botón para empezar el\nquiz y  responder preguntas"
+        android:text="@string/ManualInicio"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +51,7 @@
         android:layout_height="89dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="168dp"
+        android:contentDescription="@string/Null"
         android:rotation="90"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
