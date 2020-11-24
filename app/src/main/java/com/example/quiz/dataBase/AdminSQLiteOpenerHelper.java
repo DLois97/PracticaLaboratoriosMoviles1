@@ -13,8 +13,8 @@ public class AdminSQLiteOpenerHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table user(codigo long primary key, name text,password text)");
-        db.execSQL("create table statistics(codigo long primary key, user long,games long,average real)");
+        db.execSQL("create table user(name text primary key,password text)");
+        db.execSQL("create table statistics(user text primary key,games long,average real)");
     }
 
     @Override
