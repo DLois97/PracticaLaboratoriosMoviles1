@@ -60,4 +60,9 @@
     <string name="Registro3">Contraseña:</string>
     <string name="RegistroButton">Registrarse</string>
 
+    <string name="nameFinal">TextView</string>
+    <string name="numberGames">Número de partidas jugadas:</string>
+    <string name="averagePuntuation">Puntuación media total:</string>
+    <string name="numberGamesPlaceHolder">Text</string>
+    <string name="averagePuntuarionPlaceHolder">Text</string>
 </resources>

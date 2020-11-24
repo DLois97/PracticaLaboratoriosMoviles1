@@ -17,6 +17,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.quiz.dataBase.AdminSQLiteOpenerHelper;
 
+import java.text.DecimalFormat;
+
 public class MainActivityFinalScore extends AppCompatActivity {
 
     private int puntuacion;
@@ -65,8 +67,7 @@ public class MainActivityFinalScore extends AppCompatActivity {
         }
         TextView avgPoint = (TextView)findViewById(R.id.avgPoints);
         TextView totalGames = (TextView)findViewById(R.id.numberGames);
-
-        avgPoint.setText(String.valueOf(newAverage));
+        avgPoint.setText(new DecimalFormat("#.##").format(newAverage));
         totalGames.setText(String.valueOf(games));
 
     }
