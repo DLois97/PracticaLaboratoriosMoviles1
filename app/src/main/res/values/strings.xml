@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quiz</string>
+    <string name="app_name">Quizapp</string>
     <string name="Welcome">Bienvenido a nuestro Quiz de peliculas "\n" Para empezar pulsa el botón que tienes abajo</string>
     <string name="Begin">Empezar</string>
     <string name="pregunta1">¿QUÉ PELÍCULA GANÓ EL ÓSCAR DE ANIMACIÓN DE 2019?</string>

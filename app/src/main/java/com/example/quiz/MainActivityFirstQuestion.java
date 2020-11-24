@@ -1,19 +1,28 @@
 package com.example.quiz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivityFirstQuestion extends AppCompatActivity {
     private int puntuacion;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_first_question);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
     }
     public void Respuesta(View view){
         RadioButton idR = (RadioButton) findViewById(R.id.RespuestaCorrecta1);
@@ -52,5 +61,22 @@ public class MainActivityFirstQuestion extends AppCompatActivity {
     }
     public int getPuntuacion(){
         return puntuacion;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if( id == R.id.help) {
+            Toast.makeText(this, "HELP", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ManualPregunta.class);
+            startActivity(intent);
+        }
+        return true;
     }
 }

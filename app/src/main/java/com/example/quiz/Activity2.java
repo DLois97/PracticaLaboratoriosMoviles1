@@ -1,9 +1,12 @@
 package com.example.quiz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,6 +14,7 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -18,6 +22,7 @@ public class Activity2 extends AppCompatActivity {
     private ListView lv1;
     private String respuestas[] = {"X-Men","Los odiosos 8","Peter Pan","Gran torino"};
     private boolean soluciones[] = {true,false,false,false};
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,9 @@ public class Activity2 extends AppCompatActivity {
         Bundle datos = this.getIntent().getExtras();
         puntuacion = datos.getInt("puntuacion");
         TextView tv = (TextView) findViewById(R.id.Puntuacion);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         tv.setText("Puntuacion:"+this.puntuacion);
         lv1 = (ListView) findViewById(R.id.lv1);
@@ -58,5 +66,22 @@ public class Activity2 extends AppCompatActivity {
     }
     public int getPuntuacion() {
         return puntuacion;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if( id == R.id.help) {
+            Toast.makeText(this, "HELP", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ManualPregunta.class);
+            startActivity(intent);
+        }
+        return true;
     }
 }

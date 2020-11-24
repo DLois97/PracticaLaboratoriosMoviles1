@@ -8,6 +8,13 @@
     android:background="#0F4E8C"
     tools:context=".MainActivityFourthQuestion">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="373dp"
